@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Payment Integration with Razorpay
     document.getElementById("payBtn").addEventListener("click", function () {
         const options = {
-            key: "rzp_test_7Sac7gOkjseZDk", // Replace with your Razorpay Key ID
+            key: "", // Replace with your Razorpay Key ID
             amount: total * 100, // Razorpay expects amount in paise
             currency: "INR",
             name: "MyShop",
