@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone - Online Electronics Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #F8F9FA;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: rgb(9, 51, 61);
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .logo {
+            color: #FFC107;
+            font-size: 22px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .search-container {
+            display: flex;
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+
+        .search-container select {
+            background-color:  #E3E6E8;
+            border: none;
+            padding: 10px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .search-container input {
+            flex-grow: 1;
+            padding: 10px;
+            border: none;
+        }
+
+        .search-container button {
+            background-color: #FFC107;
+            border: none;
+            padding: 10px 20px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* Banner Slider */
+        .banner-slider {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .banner-image {
+            width: 100%;
+            height: 600px;
+            object-fit:cover;
+            position:absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.1s ease-in-out;
+        }
+
+        .banner-image.active {
+            opacity: 1;
+        }
+
+        /* Product Categories */
+        .product-categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .category-card {
+            background-color: white;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .category-card img {
+            max-width: 150px;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .category-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .category-card a {
+            display: inline-block;
+            background-color:white;
+            color:blue;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        /* Featured Products */
+        .featured-products {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-item img {
+            max-width: 200px;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .product-item .price {
+            color:brown;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .product-item button {
+            background-color:lightslategray;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #232F3E;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">MyShop</div>
+        <div class="header-nav">
+            <div class="search-container">
+                <select>
+                    <option>All Categories</option>
+                    <option>Electronics</option>
+                    <option>Computers</option>
+                    <option>Smartphones</option>
+                </select>
+                <input type="text" placeholder="Search products...">
+                <button>Search</button>
+            </div>
+            <div class="header-links">
+                <a href="signup.html">SignUp</a>
+                <a href="login.html">LogIn</a>
+                <a href="about.html">about</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Slider -->
+    <div class="banner-slider">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/d1fa2f93546277.5e67adbfa56c3.jpg" alt="Banner 1" class="banner-image active">
+        <img src="https://i.pinimg.com/originals/9c/cf/e5/9ccfe5edf3d85428c95a917dc78c2ee3.png" alt="Banner 2" class="banner-image">
+        <img src="https://static.vecteezy.com/system/resources/previews/002/822/446/large_2x/sale-banner-template-design-big-sale-special-offer-promotion-discount-banner-vector.jpg" alt="Banner 3" class="banner-image">
+    </div>
+
+    <!-- Product Categories -->
+    <section class="product-categories">
+        <div class="category-card">
+            <img src="https://www.dhresource.com/0x0/f2/albu/g17/M01/AC/F0/rBVa4l-04CSAEsGhAANodbh1tFc856.jpg/original-realme-q2-5g-mobile-phone-4gb-ram.jpg" alt="Smartphones">
+            <h3>Smartphones</h3>
+            <a href="login.html">Shop Now</a>
+        </div>
+        <div class="category-card">
+            <img src="https://www.brilliantnews.com/wp-content/uploads/2016/02/laptop.jpg" alt="Laptops">
+            <h3>Laptops</h3>
+            <a href="login.html">Shop Now</a>
+        </div>
+        <div class="category-card">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.If9JzuuHDoAG6uy9Mlk7bQHaHa&pid=Api&P=0&h=180" alt="Headphones">
+            <h3>Head phones</h3>
+            <a href="login.html">Shop Now</a>
+        </div>
+        <div class="category-card">
+            <img src="https://m.media-amazon.com/images/I/613qFCwaEnL.SL1500.jpg" alt="Smartwatches">
+            <h3>Smartwatches</h3>
+            <a href="login.html">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="https://www.designbolts.com/wp-content/uploads/2020/02/True-Wireless-Earbuds-with-Magic-HiFi-Sound-Zamkol-Waterproof-5.0-Bluetooth.jpg" alt="Product 1">
+                <h3>Wireless Earbuds</h3>
+                <p class="price">$79.99</p>
+                <a href="login.html"><button>Add to Cart</button></a>
+            </div>
+            <div class="product-item">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/61zaG990o8L.AC_SL1500.jpg" alt="Product 2">
+                <h3>4K Smart TV</h3>
+                <p class="price">$499.99</p>
+                <a href="login.html"><button>Add to Cart</button></a>
+            </div>
+            <div class="product-item">
+                <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6356/6356774ld.jpg" alt="Product 3">
+                <h3>Gaming Laptop</h3>
+                <p class="price">$1,299.99</p>
+                <a href="login.html"><button>Add to Cart</button></a>
+            </div>
+            <div class="product-item">
+                <img src="https://m.media-amazon.com/images/I/71DK-VgXIkL.AC_SL1500.jpg" alt="Product 4">
+                <h3>Bluetooth Speaker</h3>
+                <p class="price">$99.99</p>
+                <a href="login.html"><button>Add to Cart</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>© 2024 TechZone Electronics</div>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script>
+        // Simple banner slider script
+        const bannerImages = document.querySelectorAll('.banner-image');
+        let currentBanner = 0;
+
+        function changeBanner() {
+            bannerImages[currentBanner].classList.remove('active');
+            currentBanner = (currentBanner + 1) % bannerImages.length;
+            bannerImages[currentBanner].classList.add('active');
+        }
+
+        // Change banner every 5 seconds
+        setInterval(changeBanner, 5000);
+    </script>
+</body>
+</html>
